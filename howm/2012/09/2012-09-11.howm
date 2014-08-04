@@ -1,0 +1,74 @@
+7:00~
+= 
+[2012-09-11 07:46] 
+
+！★リリースリハのガイドラインの確認
+・動作確認ガイドライン.xls
+　⇒リリース後の動作確認は、Regressionテストケースを用意して、実施する
+　　　1 Regressionテスト
+　　　2 改修による影響箇所の機能試験
+　　⇒でんデンのRegressionテストは新規登録が主（更新系）。
+　　　どうする？
+
+！★メールの整理
+⇒Star付きのやつとかね。
+⇒終了
+
+！★リリースについて運転Redmineに依頼
+⇒iMASと同じチケットでやる？永峯さんに確認
+⇒その方向で。
+
+！★でんデンのリリース手順書の修正と動作確認書類の作成
+⇒完了
+
+！★でんデンのJenkinsビルドの動作確認
+⇒Projectの設定などを大幅に変更。
+⇒plistをJenkinsビルド時に作成する方向にする。
+　⇒plistを動的にはき出すscriptを作成
+
+= PlistBuddyの使い方
+⇒denden3.plistを作る方法を探していて、PlistBuddyというPlistを簡単に弄れるToolがあることを知った。
+　使い方は以下の通り。
+
+　$ /usr/libexec/PlistBuddy "Print items:0:metadata:bundle-version" 'denden3.plist'
+　⇒⇒itemsは、plistの最初のdict要素のkey。itemsはarrayなので、:0で、1つ目の要素を表す。
+　　　で1つ目の要素はまたdictなので、:metadataでkey指定、metadataはdictなので、その要素のbundle-versionキーの要素を表示させている、というわけだ。
+　ちなみに値のsetは、
+　$ usr/libexec/PlistBuddy -c "Set items:0:metadata:bundle-version BLD3122003" 'denden3.plist'
+　って感じ。簡単。
+
+⇒あきらめた。JenkinsのXcodePluginでJenkinsで設定したshellの変数が有効じゃないみたい。。。
+
+= svn 前のrevisionに戻す方法
+　svn merge -r 562:556 .
+= git 後からsharedにする方法
+　http://d.hatena.ne.jp/kuma8/touch/20110115/1295100616
+⇒ダメだった。。。
+
+★でんデンのsvnとSTアプリ置き場の整理
+⇒整理した。
+
+！★iPhone4_3のDeveloper登録
+⇒完了
+
+★でんデンコーディング規約のWiki登録
+　⇒進行中
+　　⇒pukiwikiのコードハイライトはどうやるの？？
+　　　⇒先頭行に空白を入れるとコードハイライトになった。
+⇒移行は完了。あとは内容の精査。
+　⇒進行中
+　GoogleのObjective-cのstyle guideを参考に加筆・修正しよう。
+　http://www.textdrop.net/google-styleguide-ja/objcguide.xml
+　⇒進行中
+
+★Appledoc
+
+★ビルドマシンとJenkinsジョブについてWikiに整理
+
+=================================================================
+★備さんとRNGのリハの時間を調整する
+
+★切り戻し手順書作成
+
+★でんデン結合試験
+⇒16:00〜

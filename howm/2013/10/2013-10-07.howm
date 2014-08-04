@@ -1,0 +1,59 @@
+= xcodeのプロジェクト設定まとめ 
+[2013-10-07 10:46] 
+
+・Target
+　（Light版と課金版など、異なるアプリとして出力する場合に設定）
+　今回は、ローカルとSTと商用と環境が異なる者があるが、アプリとして分けるほどではないので、1つのTargetで良い。
+　環境が異なるものについては、後述するConfigurationで環境設定分けを行うものとする。
+
+・Configuration
+　（接続先サーバの違いなど）
+　
+
+= ログサーバ
+[2013-10-07 13:43] 
+＜検証＞
+210.169.154.47
+ID:
+pass:
+
+＜商用＞
+101.102.255.134
+
+= zabbix監視に必要な書類作成
+[2013-10-07 18:08] 
+
+・ログのサンプル
+　何をきっかけにAlertを出すか
+
+　ログの種類
+　　エラーだけ。ovlogに吐かれるエラーだけ。
+
+= ログイン仕様
+[2013-10-07 18:14] 
+
+★最新施工業者が分かる資料（ファイルの日付は微妙だが、最新のものらしい。。）
+　http://10.116.219.19/svn/radrepos01/Femco-PUSH/doc/02.基本設計書/01.基本設計書/★施工業者_20121127.xls
+
+・ログインの仕様について
+　-Femcoでログイン
+　　⇒検索すると、Femcoのログインアカウント（TB_FMC_USER）の部署(:NDEPARTMENTID)に紐づくオーダーが表示される（現状のFemcoの仕様）。
+　※ただし、内部的には若干複雑で、部署に関連づくオーダーが直接表示されるわけではない。
+　　表示されるオーダーは、TB_FMC_USER:NDEPARTMENTIDをTB_MST_PUSHTRADERSとぶつけて、施行会社(TB_MST_PUSHTRADERS:NTRADERSID)をみつけて、その施行会社に紐づくオーダーが表示されている。
+
+　-Femco上の割当/解除ボタンの表示
+　　⇒割当/解除ボタンは、Femcoのアカウントの、部署名(TB_MST_PUSHTRADERS:NTRADERSNAME)が、「SBM営推（XXX）」（XXXは、北海道、東北、関東、東海、関西、北陸、中国、四国、九州の9個）の部署に関連づけられたユーザの場合、表示される。
+
+　-Femcoでオーダーの登録（GOAST用）
+　　⇒割当ボタンを押下すると、FemcoへログインしているユーザのユーザID（TB_FMC_USER:NUSERID）とオーダーのFF受番が結びついたテーブルにレコードが格納される（TB_PUSHORDERASSIGNMENT）。
+
+　-Femcoでオーダーの削除（GOAST用）
+　　⇒TB_PUSHORDERASSIGNMENTのNDELFLGが1になる。
+
+　-GOASTのログイン
+　　⇒iPadでGOASTを起動して、業者ID/スタッフコードを記入してログインする。
+　　　業者IDとスタッフコードは、文字列連結（業者ID前後に「_」が挿入）され、GSGS01.TB_MST_USER:VCCOMMONIDとマッチングする。
+　　　マッチした場合、ログインする。
+
+　-GOAST⇒Femco オーダーリスト取得
+　　⇒GOASTで持っているユーザID（TB_MST_USER:NUSERID）をパラメータに、Femcoのオーダーリスト取得APIをcall。TB_PUSHORDERASSIGNMENT:NUSERIDと一致するオーダーのリストを返却する。

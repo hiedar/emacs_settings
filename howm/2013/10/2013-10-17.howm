@@ -1,0 +1,114 @@
+= 
+[2013-10-17 11:03] 
+
+・FMCには【SBM】営推　あるけど、EFCには無い。
+
+　○上記ユーザに参照/更新権限ついてる場合
+　　・Femcoの全オーダーの検索、閲覧、更新可能。
+　　・(10/29リリース予定の)オーダー割当できない。
+
+　○上記ユーザに権限ついて無い場合
+　　・Femcoの全オーダーの検索、閲覧、更新できない。
+　　・(10/29リリース予定の)オーダー割当できない。
+
+　⇒権限ついていない場合、まず、Femcoの申請書を再度提出してもらい、権限の変更（(PUSH)参照/更新権限）をしてもらう必要があります。
+
+　その上で、権限のあり/無しに関わらず、Femcoに以下の改修が必要になります。
+
+　・ログインDTO改修
+　・オーダー検索画面改修
+
+伝えたいこと
+　・営推にアカウントの権限追加の申請書を出してもらう必要がある可能性あり。
+　・Femcoに改修が必要。
+
+= DDL作成
+[2013-10-17 14:15] 
+
+＜現状あるものまとめと疑問点＞
+
+・DB_CON_GST.bat
+　⇒L15 STとキャンセルしかない。商用はいつ追加する？
+　⇒L34,36 商用はいつ追加する？
+
+・01_RELEASE_DDL.bat
+
+・DDL.sql
+
+・SQ_TB_TRN_FIELD_MEMO_INFO.sql
+　⇒L16 MAXVALUEが9999999999なのは適切？
+
+・CREATE_TB_MST_USER.sql
+
+・CREATE_TB_MST_COMPANY.sql
+
+・CREATE_TB_TRN_FIELD_MEMO_INFO.sql
+
+
+
+= DML作成
+[2013-10-17 15:00] 
+
+＜現状あるものまとめと疑問＞
+・02_RELEASE_DML.bat
+⇒完成
+
+・DML.sql
+⇒完成
+
+・DML_TB_MST_USER.sql
+　⇒ST用と商用で分けて用意
+　　⇒ST用：ユーザは、Femcoの実データから用意
+　　⇒商用：？？？？？？？？？？？？？？？？
+　　　⇒開発用のアカウントも、商用に準備しておこう。⇒入れるデータ＋1件ということ。
+
+　＜ST用＞
+
+　＜商用＞
+
+
+・DML_TB_MST_COMPANY.sql
+　⇒ST用と商用で分けて用意
+　　⇒ST用：会社は、Femcoの実データから用意。これはすぐできる？
+　　⇒商用：？？？？？？？？？？？？？？？？
+
+　＜ST用＞
+
+　＜商用＞
+
+
+■LOGに出力される想定を記載すること。
+　・01_RELEASE_DDL.log
+　・02_RELEASE_DML_ROLLBACK.log
+　・02_RELEASE_DML_COMMIT.log
+
+= GOASTログが仕込まれているイベント調査
+[2013-10-17 18:15] 
+
+＜全イベント＞
+・ログイン　○ loggingUtils.loginWrite
+・ログアウト　○ loggingUtils.logoutWrite
+・オーダー１件選択　○ 	loggingUtils.loggingWrite("order_detail_showed");
+・オーダー非表示　×
+・オーダー表示　×
+・スポットメモ（オーダー詳細）　○　loggingUtils.loggingWrite("order_detail_showed");
+・スポットメモ（オーダーリスト）　○　loggingUtils.loggingWrite('order-list-memo-button_clicked');
+・ルート検索　○　loggingUtils.loggingWrite("route_button_clicked");
+・ルート消去　×
+・設置写真　○　loggingUtils.loggingWrite("picture_button_clicked");
+・利用状況　×
+・現在地ボタン　○	loggingUtils.loggingWrite("current_position_clicked");
+・閉店/移転チェック　×
+・申込書番号バーコード表示　×　
+
+= FMS提案元ネタ
+[2013-10-17 19:35] 
+
+・FMSは、以下を管理してるシステム
+機器
+設備（建物）
+IP
+工事
+
+
+礎と管理してるものが被る？部分も多いらしい。

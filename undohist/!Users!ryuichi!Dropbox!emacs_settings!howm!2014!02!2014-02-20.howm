@@ -1,0 +1,5 @@
+
+((digest . "8403794c0d9e49cf8a3e1d1c8d856c89") (undo-list nil (3 . 5) nil (#("課会" 0 2 (fontified t face (howm-mode-title-face))) . -3) (3 . 5) (#("かかい" 0 3 (fontified t face (howm-mode-title-face))) . -3) (3 . 6) (#("かか" 0 2 (fontified t face (howm-mode-title-face))) . -3) (3 . 5) (#("かｋ" 0 2 (fontified t face (howm-mode-title-face))) . -3) (3 . 5) (#("か" 0 1 (fontified t face (howm-mode-title-face))) . -3) (3 . 4) (#("ｋ" 0 1 (fontified t face (howm-mode-title-face))) . -3) (3 . 4) 6 nil ("%cursor" . -3) ("%file" . -30) (11 . 29) ("%date" . -11) ("%title" . -3) (1 . 30) ("= 
+[2014-02-20 09:27] 
+
+" . 1) 3 ((marker . 1) . -24) nil ("%cursor" . -3) ("%file" . -30) (11 . 29) ("%date" . -11) ("%title" . -3) (1 . 30) (t 0 0 0 -1000)))

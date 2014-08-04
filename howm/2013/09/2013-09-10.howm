@@ -1,0 +1,103 @@
+= 
+[2013-09-10 10:43] 
+
+p3
+・HTTP Request
+　keyword指定は、今後KIWIのOutageチェックをしたりする拡張のため、と考えてOK？
+
+⇒URIで識別すべきでは？
+　⇒getApInfoは、TUNOのOutageチェック用。
+　⇒キーワードで処理を変化させるとなると、新しい機能を追加するたびに既存APIの再試験が必要。さらに、関連システムとの連携試験が必要になってくるよ？
+
+　⇒つまり、Keywordは要らないのでは？
+
+・POST？GETじゃだめ？パラメータに秘匿すべき情報はないのでは？
+
+p4
+・AccessKeyの最小、最大文字数は？
+
+・TargetAp⇒TargetApMac
+　最小、最大文字数は？
+
+・Machine⇒MachineId
+　文字列？数値？
+
+p5
+・HTTPステータスコードが200固定なのはなぜ？
+　⇒返却されることが想定されるHTTPステータスコードは、200と、500くらい？
+　
+　ステータスコードをみると、
+　1　⇒　200
+　2　⇒　400
+　3　⇒　403
+　4　⇒　500
+　で代替可能、というかそれが本来の使い方では？
+
+　普通はHTTPステータスコードで大まかな処理結果の場合分けするから、そこからさらにエラー系の場合分けを書かなくてはならなくなると、クライアント側の処理が煩雑になるので、できればstatusというのはHTTPステータスコードに寄せてほしい。再発明してほしくない。
+
+= 
+[2013-09-10 15:10] 
+
+・【要望】オーダーリスト/詳細のウインドウの出し入れについて
+　⇒表示/非表示のアニメーションをもっと速くしたい。
+　　今何秒？
+　　⇒300ms
+
+・【要望】出し入れのボタンをボトムツールバーにおくのは避けたい。
+　意味合いが他のメニューと違う。
+
+・【デグレ報告】オーダーリストでオーダー選択時、マップ上のピンの色がかわらなくなっている
+
+・【追加要望】ピンアイコンの変更
+
+・【追加要望】　Googleのロゴをオーダーリストの裏側に表示するようにする
+
+・【追加要望】「オーダー情報」⇒オーダー/オーダー表示
+　⇒ルート/ルート消去と同じような感じで表示を切り替えたい。色も。
+
+= 
+[2013-09-10 16:22] 
+
+// WARNING: Landscape Rightの向き固定の処理あり
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+    NSInteger reviser;
+
+    switch ([UIApplication sharedApplication].statusBarOrientation) {
+        case UIInterfaceOrientationPortrait:
+            reviser = 0;
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            reviser = 180;
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            reviser = 270;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            reviser = 90;
+            break;
+        default:
+            break;
+    }
+    
+    // magneticHeadingは [UIInterfaceOrientationPortrait] の際のもののため、端末の向きにより補正をかける
+    NSLog(@"base heading degree:%d, magnetic heading:%d",self.headingDegree,(NSInteger)newHeading.magneticHeading);
+    self.headingDegree = (NSInteger)newHeading.magneticHeading + reviser;
+    if (self.headingDegree > 360) {
+        self.headingDegree -= 360;
+    }
+    
+    NSLog(@"headingDegree:%d, reviser:%d",self.headingDegree,reviser);
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_UPDATE_HEADING object:nil];
+}
+
+= アプリ名
+[2013-09-10 17:57] 
+
+GEOSAS
+Geo Operation Smart Assist System
+Geo 
+
+ODYSSEY
+
+Operation 

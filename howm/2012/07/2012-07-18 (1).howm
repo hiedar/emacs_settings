@@ -1,0 +1,18 @@
+10:00~
+= 
+[2012-07-18 10:05] 
+
+★ADBコマンドを使えるようにする
+AndroidSDKのDownload
+　android-sdk_r20-macosx.zip
+解凍して中身をcheck。$SDK_ROOT/tools/に「adb_has_moved.txt」というファイルがある。どうやら手動でinstallの必要が有りそうだ。
+$SDK_ROOT/tools/android をterminalで実行すると、「Android SDK Manager」が開く。
+platform-toolsにcheckを入れてDownload。ダウンロードが終わると$SDK_ROOT/platform-tools/にadbが追加されている。
+
+★リンゴ隊　欲しい本リスト作成
+　・メール(リンゴ隊に向け)
+　・Excelにまとめてokeさんに提出
+
+★でんデン実装
+
+

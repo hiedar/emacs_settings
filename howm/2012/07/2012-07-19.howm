@@ -1,0 +1,10 @@
+8:30 ~
+= 
+[2012-07-19 09:56] 
+
+★(Roller)接続機器確認画面
+　・DDRollerEquipmentControlの追加
+　・initWithNibNameで、pathForResouce:ofTypeのofType部分を改行
+　・viewDidAppearを削除
+　・- (void) updateWiFiEquipmentLabelWithMac　作成
+　・

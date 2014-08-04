@@ -1,0 +1,28 @@
+10:00~19:00
+= 
+[2012-06-21 11:50] 
+
+★UILabelを、表示している文字数によって、改行して表示する。
+
+    CGRect frame;
+
+    frame = testLabel.frame;
+
+    frame.size = CGSizeMake(215, 0);
+
+    [testLabel setFrame:frame];
+
+    self.testLabel.text = [self.testLabel.text stringByAppendingString:self.testTextField.text];
+    
+    [testLabel sizeToFit];
+
+  上記コードで可能。
+
+  system 17ptで、Labelの高さは21ptとなる。1行増えるごとに21ptheightも増える。
+  system 13ptで、16ptずつ。
+  system 14ptで、18ptずつ。
+  system 15ptで、・・・こんなこと調べても仕方ないか。自動で高さを取得すればいいんだ。
+
+  結局のところ、Labelの元の高さがあって、文字列を挿入した後sizeToFitしてその後の高さとの差分を調べて、その差分分、そのラベル以下のコントロールの位置を下げていけばいいってことだ。最後にScrollViewのContentsSizeを変更することも忘れずにやろう。
+
+  

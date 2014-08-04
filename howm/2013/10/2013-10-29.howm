@@ -1,0 +1,11 @@
+= GOAST-Femcoの外部IF定義書のURL部分を修正する
+[2013-10-29 21:40] 
+
+商用環境と検証環境のURLを書き換える。ドメインのみ。
+↓
+商用：
+http://ec5.ope01.local/
+検証：
+http://st-ec5.dev01.local/
+
+

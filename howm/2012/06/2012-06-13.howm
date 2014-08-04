@@ -1,0 +1,50 @@
+10:00~
+= 
+[2012-06-13 11:49] 
+
+★渡邉さんとの開発連携について
+ - 今後の開発について電話で話し合った。
+ -- とりあえず共通で使えそうなクラスをまず作成し、各画面のテスト項目書、コードの作成は渡邉さんが行うことのなった。
+ - 今後ソースを二人で弄り始めるので、sakuraサーバでgitリポジトリ作成し、二人でコミットできるようにした。
+ 　⇒ただ、はまった。Xcode Organizerで、ssh://domain.com:10022/var/repos/git/testProj
+ 　　を入力しても渡邉さんはAuthorizationでNGだった。。。
+ 　　⇒結局渡邉さんにssh-keygenコマンド使ってもらって、公開鍵をサーバに登録してsshログインできるようにしたら解決した。
+
+ - 今度は、Organizerでgit pushできない問題が。。。File-SourceControl-Pushを選ばないとだめらしい。Organizerに用意しとけよ。。。
+
+★redmine-git連携
+サーバ上にgitのリポジトリを作成する。
+cd /var/repos/git/XXXX
+リポジトリの権限を変更する。
+chgrp developer /var/repos/git/XXXX
+git初期化
+cd /var/repos/git/XXXX
+git --bare init
+入れたいプロジェクトをgit init
+cd ~/Download/trunk
+git init
+.gitignore追加
+https://www10189uf.sakura.ne.jp/projects/projects/sbden/wiki/IOSアプリ開発基準の.gitignoreを参照。
+全ファイルをgit add , commit.
+git add .
+git commit -m "Initial Commit"
+リモートのサーバにローカルのmasterブランチをpushする。
+git remote add origin ssh://ryuichi@49.212.152.203:10022/var/repos/git/XXXX
+⇒これでoriginがssh://ryuichi@49.212.152.203:10022/var/repos/git/XXXXになる？よくわからん。
+git push origin master (master を origin にプッシュするという意味)
+
+★Computexレポート提出
+⇒未
+★@IT BOYDレポート(松本さん)
+⇒未
+
+★運転TへのRedmineからの依頼の流れを確認
+　⇒永峯さん転送メールでの確認
+　⇒未
+
+★自分Redmineから業務Redmineへのでんデンのスケジュール登録
+　⇒ブック1.xlsにある項目を業務Redmineに登録する。
+　⇒未
+
+★リリース手順書/リリースタイムラインの修正
+　⇒未

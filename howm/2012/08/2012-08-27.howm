@@ -1,0 +1,48 @@
+10:15~20:00
+= 
+[2012-08-27 10:24] 
+
+★ Lion 再インストール
+ - 14:30完了。
+
+★ eclipse インストール & 日本語化
+ http://www.la-nouveau.mydns.jp/wordpress/?p=1302
+
+ - Eclipse Juno Java EE
+ - Pleiades Juno
+
+★ LionでPHPを有効にする
+ http://eyenote.cocolog-nifty.com/blog/2011/08/mac-os-x-107lio.html
+
+ =>完了
+
+ - 上記の作業が終わったら、
+  $ sudo apachectl configtest
+   でテストして syntax OK であれば OK。
+
+★でんデンのJenkinsを利用したテストについて
+ Jenkins でジョブを実行すると、ビルド用マシンに制御が移り、ビルドと UIAutomation が Instrumentsで実行される。
+ ここで問題が一つ。でんデンは現状 iPhone 上でしか実行できない。ビルド用マシンの UIAutomationは、iPhone Simulator しか動かせない(実際は実機でも可能かもしれないが)
+
+ というわけで、今回はでんデンのテストは手動で実行して evidence を残すことにする。
+
+ =>とりあえず完了。
+ 
+★渡邉さんの成果物をどっかに格納
+ - /Volumes/devsShare/VBDBATeam/02.ｱﾌﾟﾘ基盤ﾌﾟﾛｼﾞｪｸﾄ/109.テクニカルT/01.チーム資料/02.あたらしいリンゴ隊/01.て゙んでんＡＰＬ/自動テストツール
+ に格納。
+ 完了。
+
+★でんデンの使い方を谷本にメール
+ =>完了
+ 
+★ でんデンの改修
+ - テスト項目の修正（追記）
+   =>途中。保守時の電測NGまで追記済み。
+ - 自動テストツールでテストコード作成
+ - APL の修正
+ - 自動テスト開始
+ - エビデンス確認
+   
+★ android環境構築
+

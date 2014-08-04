@@ -1,0 +1,10 @@
+= 
+[2013-10-21 09:07] 
+
+javascript:{var user_login = document.getElementById("user_login").value = "SBE"; var user_pass = document.getElementById("user_pass").value = "1100774"; document.authActionForm.submit();}
+
+= 
+[2013-10-21 18:56] 
+
+設備管理システム統括Redmine
+shiratoris34

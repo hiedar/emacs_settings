@@ -1,0 +1,2 @@
+
+((digest . "b89c669ed45863c3553623cf7fbb7a7d") (undo-list nil (650 . 652) nil ("1" . -650) ((marker . 1) . -1) nil ("0" . -651) ((marker . 1) . -1) nil (408 . 409) nil ("9" . -408) nil (387 . 388) nil ("8" . -387) nil (347 . 348) nil ("7" . -347) nil (267 . 268) nil ("6" . -267) nil (187 . 188) nil ("5" . 187) nil (107 . 108) nil ("4" . 107) nil (9 . 10) nil ("3" . 9) nil undo-tree-canary))

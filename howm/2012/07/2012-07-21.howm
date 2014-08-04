@@ -1,0 +1,11 @@
+= 
+[2012-07-21 22:52] 
+
+★申込書番号をバーコードで取得した場合、「0JA」や「A」始まりのチェックができないから、
+
+　　- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+
+　メソッド内で-(BOOL)inputApplnumTextCheckメソッドを使ってチェックをした方がよい。
+
+
+

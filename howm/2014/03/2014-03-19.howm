@@ -1,0 +1,18 @@
+= 
+[2014-03-19 00:41] 
+
+{"messagelist":
+  [
+    {"id":"1",
+	 "messages":[
+	   {"name":"SENDERNAME","message":"THISISMESSAGE"},{},{}
+	 ]
+	},
+	{"id":"2",
+	 "messages":[
+	   {"name":"SENDERNAME","message":"THISISMESSAGE"},{},{}
+	 ]
+	}
+  ]
+};
+

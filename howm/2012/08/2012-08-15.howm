@@ -1,0 +1,37 @@
+9:45~19:30
+= 
+[2012-08-15 09:51] 
+
+★リリース手順書の修正
+  ⇒終了
+
+★8/21リリース判定会参加
+
+★ビルド環境を整える
+  iOSの証明書について確認
+
+  結構確認した。
+  分かったこと。
+   - 開発メンバは自分のmacで公開鍵/秘密鍵のペアを作成
+   - Appleに公開鍵を送って、公開鍵付きの署名証明書をダウンロード
+   - keychainAccessで作成した秘密鍵とダウンロードした署名証明書を結びつける
+   - iOS Dev Centerで、登録した証明書と結びついたProvisioning Profileを作成(Provisioning Profileには証明書情報が含まれる)
+   - 作成したProvisioning ProfileをダウンロードしてXcodeに登録
+   - XcodeはProvisioning Profileの証明書情報を使ってDebugの際などにアプリを起動させる
+   - iPhoneはアプリの起動の際に端末にインストールされたProvisioning Profileを使ってアプリの起動を正当化し、起動する
+
+   で、結論。
+
+★安田さんから入手したp12証明書でEnterprise Buildができるか確認
+  =>できた。
+
+★xcodebuildコマンドでArchiveしてipa、plistの出力し、所定のフォルダに置く作業
+  - xcodebuildコマンド一例
+    xcodebuild -configuration Release install DSTROOT=~/Desktop/out_app
+  - ipaを作るxcrunコマンド(失敗例)
+    xcrun /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication  ~/Desktop/out_app/Applications/DENDEN.app/ -o ~/Desktop/out_ipa/tenten.ipa -enbed /Users/ryuichi/Library/MobileDevice/Provisioning\ Profiles/B1AEA139-02A6-4044-8985-C4E3F06D446B.mobileprovision
+    =>error code : 6でダウン。イミフ。
+
+★jenkinsサンプルで導入
+
+

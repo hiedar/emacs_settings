@@ -1,0 +1,35 @@
+10:00~20:00
+= 
+[2012-06-22 11:27] 
+
+I decided to switch the language of writing or thinking.
+What is the worrying?
+ - special characters.
+   In Japanese, I use a lot of special characters like "nakaguro" or diamond mark.
+ - After all, I'm not good at writing or thinking in English.
+   This is a big problem. I have to improve English vocabulary as soon as possible.
+   At first, let's do that with the book ,"10000 word level book" I bought the other day.
+
+Should I buy the new MacBook Air 11 in return instead of the old MacBook Air 13 I bought last October?
+ - No.The old macbook air is very usefull still now.
+ - How about USB3 that is attached to the new one?
+ - Do you use any USB3 peripheral equipment?
+ - I will buy USB3 HDD.
+ - Do you use that frequently?
+ - I do.
+
+How to improve output ability of English?
+
+In Redmine... I have to write in Japanese...so I can't use English all day. I have to use Japanese sometimes...
+But I can try to use English as much time as possible.
+
+- To do
+ - make issues to my redmine.
+   issues
+   * 
+
+★でんデンv3.1.1の新TUNO2確認
+　⇒手に入れたTUNO2が、6月に配布するものじゃなくて、さらに新しいMACに対応したものだった。
+　⇒とりあえず対応するためにコードを変えたが、(そしてテストまでしたが・・・)今回配布するものではないのでビルドして再リリースはしなくてよいということに。コードはsvnにsvn copyしてbranchesに上げておいた。
+
+★

@@ -1,0 +1,6 @@
+
+((digest . "d0d236c63a53868a621ce2e3c1985631") (undo-list (1761 . 1762) nil (1759 . 1761) nil (#("以上" 0 2 (fontified t)) . -1759) (1759 . 1761) (#("いじょう" 0 4 (fontified t)) . -1759) (1759 . 1763) (#("いじょ" 0 3 (fontified t)) . -1759) (1759 . 1762) (#("いj" 0 2 (fontified t)) . -1759) (1759 . 1761) (#("い" 0 1 (fontified t)) . -1759) (1757 . 1760) nil (nil rear-nonsticky nil 1756 . 1757) (nil fontified nil 1 . 1757) (1 . 1757) (#(";; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+" 0 3 (fontified t face font-lock-comment-delimiter-face) 3 77 (fontified t face font-lock-comment-face) 77 80 (fontified t face font-lock-comment-delimiter-face) 80 140 (fontified t face font-lock-comment-face) 140 143 (fontified t face font-lock-comment-delimiter-face) 143 190 (fontified t face font-lock-comment-face) 190 191 (fontified t)) . 1) (t 0 0 0 -2000) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1759) . -191) ((marker . 1) . -191) ((marker . 1) . -191) nil (1 . 192) (t 0 0 0 -2000)))

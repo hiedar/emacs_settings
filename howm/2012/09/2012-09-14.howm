@@ -1,0 +1,20 @@
+14:00~
+= 
+[2012-09-14 15:14] 
+
+★松本さんのやる試験項目の作成
+
+
+★でんデンコーディング規約のWiki登録
+　⇒進行中
+　　⇒pukiwikiのコードハイライトはどうやるの？？
+　　　⇒先頭行に空白を入れるとコードハイライトになった。
+⇒移行は完了。あとは内容の精査。
+　⇒進行中
+　GoogleのObjective-cのstyle guideを参考に加筆・修正しよう。
+　http://www.textdrop.net/google-styleguide-ja/objcguide.xml
+　⇒進行中
+
+★Appledoc
+
+★ビルドマシンとJenkinsジョブについてWikiに整理

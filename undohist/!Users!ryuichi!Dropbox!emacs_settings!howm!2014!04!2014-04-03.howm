@@ -1,0 +1,8 @@
+
+((digest . "35fd6fc5228563882b353f2d43ea1caa") (undo-list nil (159 . 160) nil (152 . 159) nil (151 . 152) nil (146 . 151) nil (145 . 146) nil (135 . 145) nil (134 . 135) nil (126 . 134) nil (125 . 126) nil (112 . 125) nil (#(">>> ~/Dropbox/emacs_settings/howm/2014/03/2014-03-30.howm" 0 42 (fontified t face (howm-mode-ref-face action-lock-face)) 42 52 (fontified t face (howm-mode-ref-face action-lock-face action-lock-face)) 52 57 (fontified t face (howm-mode-ref-face action-lock-face))) . 110) nil ("%cursor" . -90) (117 . 174) ("%file" . -117) (98 . 116) ("%date" . -98) ("%title" . -90) (88 . 117) ("= 
+[2014-04-03 08:32] 
+
+" . 88) 90 nil ("%cursor" . -90) ("%file" . -117) (98 . 116) ("%date" . -98) ("%title" . -90) (87 . 117) 1 (t 21308 40457 0 0) nil (86 . 87) nil (78 . 86) nil (77 . 78) nil (63 . 77) nil (62 . 63) nil (55 . 62) nil (54 . 55) nil (47 . 54) nil (46 . 47) nil (36 . 46) nil (35 . 36) nil (31 . 35) nil (30 . 31) nil (25 . 30) nil (#(">>> ~/Dropbox/emacs_settings/howm/2014/03/2014-03-30.howm" 0 42 (face (howm-mode-ref-face action-lock-face) fontified t) 42 52 (face (howm-mode-ref-face action-lock-face action-lock-face) fontified t) 52 57 (face (howm-mode-ref-face action-lock-face) fontified t)) . 23) nil ("%cursor" . -3) (30 . 87) ("%file" . -30) (11 . 29) ("%date" . -11) ("%title" . -3) (1 . 30) ("= 
+[2014-04-03 07:30] 
+
+" . 1) 3 nil ("%cursor" . -3) ("%file" . -30) (11 . 29) ("%date" . -11) ("%title" . -3) (1 . 30) (t 0 0 0 -1000)))

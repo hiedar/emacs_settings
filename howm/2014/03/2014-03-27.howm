@@ -1,0 +1,30 @@
+= 
+[2014-03-27 06:07]
+
+curl -3 -v -b cookies.txt -c cookies.txt -i -H "multipart/form-data" -H "Content-type: multipart/form-data" -F "certificate=@/Users/ryuichi/Desktop/CenturionGOASTAPNsDevelop.p12" -F "passphrase=Admin000" -F "production=false" -X POST http://chikuzen.ninja-web.com:8080/ag-push/rest/applications/6aec971d-002b-4f29-8085-f882200e68c1/iOS
+
+= 
+[2014-03-27 22:25] 
+
+・appDelegateで画面サイズ判定
+　⇒appDelegateのpropertyに追加
+
+・#define MIN(a,b)    ((a) < (b) ? (a) : (b))
+#define MAX(a,b)    ((a) > (b) ? (a) : (b))
+
+　⇒NSObjCRuntime.hに定義されているので使えるよ！
+
+・テクスチャは事前に全部作っとく
+
+・ablosutePosition()関数
+　⇒親ノードをたどっていって、親のx,y座標を全部足すと、渡されたノードの絶対座標が出る
+
+・履歴クリア機能
+
+・各数字が入ってるパネル番号を記録
+　NSMutableArray *panelNumberRecordingArray = @[[@"23",@"45",@"61"],[],...];
+　⇒ 参照
+　　panelNumberRecordingArray[2]⇒3が入ってるパネル番号が文字列Arrayになってる
+
+・選択しているパネルに関連する行、列、ボードをBlendedで色変更する
+　

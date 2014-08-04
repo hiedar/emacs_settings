@@ -1,0 +1,9 @@
+= TODO
+[2013-08-18 14:34] 
+
+・FieldMemoViewController
+　memoをdictionaryにする時のキー
+　　didSendMemo
+　　date
+　上記がべた書きなのを直そう。
+

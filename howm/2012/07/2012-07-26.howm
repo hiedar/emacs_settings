@@ -1,0 +1,18 @@
+10:00~
+= 
+[2012-07-26 10:45] 
+
+★ deprecated methodについてまとめる
+
+★ でんデンのテスト
+
+★ きちんと選択した機器情報が送られているかテスト
+<バグ>
+appData.partsTypeCodeと、appData.circuitModeCodeの2つの区別がついてない。
+⇒partsTypeCodeに設定するもとデータ(partsTypeArrayなのかcircuitModeArrayなのか)をしっかり管理する。
+　⇒訂正済み
+
+★ ドングル動作モードは正しい値が送られているか？
+　⇒訂正済み
+
+★ 輻輳エリアCGIに渡ってるパラメータは正しいか？

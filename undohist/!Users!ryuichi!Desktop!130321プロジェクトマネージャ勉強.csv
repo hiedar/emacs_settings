@@ -1,0 +1,6 @@
+
+((digest . "ac0715945dc5b9afc75dda7eaf742887") (undo-list nil (#(";; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+" 0 3 (fontified t face font-lock-comment-delimiter-face) 3 77 (fontified t face font-lock-comment-face) 77 80 (fontified t face font-lock-comment-delimiter-face) 80 140 (fontified t face font-lock-comment-face) 140 143 (fontified t face font-lock-comment-delimiter-face) 143 190 (fontified t face font-lock-comment-face) 190 191 (fontified t)) . -1) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 380) . -191) ((marker . 380) . -191) ((marker . 1) . -191) nil (nil rear-nonsticky nil 643 . 644) (nil fontified nil 571 . 644) (nil fontified nil 514 . 571) (nil fontified nil 457 . 514) (nil fontified nil 433 . 457) (nil fontified nil 379 . 433) (nil fontified nil 340 . 379) (nil fontified nil 333 . 340) (nil fontified nil 301 . 333) (nil fontified nil 229 . 301) (nil fontified nil 192 . 229) (192 . 644) (t . 0) nil (1 . 192) (t . 0)))

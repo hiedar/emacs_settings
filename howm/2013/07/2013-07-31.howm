@@ -1,0 +1,26 @@
+= TODO
+[2013-07-31 10:44] 
+
+現在の保守ツール隊の資産、環境まとめをWikiに。
+
+= 
+[2013-07-31 11:08] 
+
+login：地図画面表示時に一度だけ。
+
+Logging：
+・現在地ボタンを押下時：current_position_clicked
+・オーダーリスト押下時：order_detail_showed
+・ルートボタン押下時：route_button_clicked
+・設置写真ボタン押下時：picture_button_clicked
+
+logout:ログアウトボタン押下して、OK押下時
+
+= 
+[2013-07-31 15:36] 
+
++ echo /Users/build/Documents/DendenBuild/workspace/FieldToolTrialBuild
+/Users/build/Documents/DendenBuild/workspace/FieldToolTrialBuild
++ mv '/Users/build/Documents/DendenBuild/workspace/FieldToolTrialBuild/build/FieldTool-iphoneos/*.ipa' /Users/build/Documents/DendenBuild/workspace/FieldToolTrialBuild/build/FieldTool-iphoneos/FieldTool.ipa
+mv: rename /Users/build/Documents/DendenBuild/workspace/FieldToolTrialBuild/build/FieldTool-iphoneos/*.ipa to /Users/build/Documents/DendenBuild/workspace/FieldToolTrialBuild/build/FieldTool-iphoneos/FieldTool.ipa: No such file or directory
+Build step 'シェルの実行' marked build as failure

@@ -1,0 +1,19 @@
+8:00~19:00
+= 
+[2012-08-17 10:03] 
+
+★shell scriptはエレガントでなければならない
+  http://www.atmarkit.co.jp/flinux/rensai/smart_shell/01/01.html
+
+★どうしてemacsを使うの？どうしてiTermを使うの？
+ 
+  
+★Jenkinsのslaveを、Mac起動時にadminクライアントで立ち上げたい。
+  =>サービスとして。shell scriptのサービス登録はどうやってやるの？
+  =>launchd.plist(/Library/LaunchDaemons/*.plist)を設定して起動すればいい。
+    =>設定方法をRedmineのwiki、Pukiwikiに記述すればいい。
+  
+★笹本さん、渡邉さんのタスクまとめ
+  =>Redmineに登録
+
+★

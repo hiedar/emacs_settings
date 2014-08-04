@@ -1,0 +1,50 @@
+= 日報ファイル作成
+[2013-10-02 09:00] 
+
+GOAST
+★　白鳥 真太郎（shintaro.shiratori01@g.softbank.co.jp）
+　　応地 真精（masakiyo.oji@g.softbank.co.jp）
+★　檜枝（既存）
+
+TLAS
+★　駒井 一憲（kazunori01.komai@g.softbank.co.jp）
+　　岡本 祐樹（yuki.okamoto@g.softbank.co.jp）
+　　田代 哲也（tetsuya02.tashiro@g.softbank.co.jp）
+　　大塚 慎一（shinichi01.otsuka@g.softbank.co.jp）
+　　関 信弘（kojiro.seki@g.softbank.co.jp）
+　　笹本 賢（masaru.sasamoto@g.softbank.co.jp）
+　　■袖山 和久（メアド検索できない）
+
+Public API
+★　島本 和典（kazunori.shimamoto01@g.softbank.co.jp）
+　　安達 美沙希（misaki.adachi@g.softbank.co.jp）
+
+分析
+★　中本 良和（yoshikazu.nakamoto@g.softbank.co.jp）
+　　橋本 誠司（seiji.hashimoto@g.softbank.co.jp）
+
+チームインドア
+　　神野（既存）
+
+★　松熊 克幸（katsuyuki.matsukuma@g.softbank.co.jp）
+　　早川 歩（ayumu.hayakawa@g.softbank.co.jp）
+　　内藤（既存）
+
+★　海上（既存）
+　　小日置（既存）
+　　前野 大介（daisuke.maeno@g.softbank.co.jp）
+
+= ログ分析のスクリプト作成
+[2013-10-02 11:25] 
+
+・抽出したいもの
+　ログ件数
+　利用者数
+　利用機能
+　　オーダー詳細
+　　ルート検索
+　　現在地ボタン
+　　ユーティリティ
+　　メモボタン
+　　ロケーションアップデート
+

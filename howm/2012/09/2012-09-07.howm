@@ -1,0 +1,55 @@
+9:15~19:30
+= 
+[2012-09-07 09:59] 
+
+★UIAutomationのデモ用のプロジェクト用意
+⇒そのまま渡邉さんのTutorialを使えばいいか。
+  EkSampleDemoのプロジェクトを利用。
+  ⇒Script実行結果のLogがどこに出てるか渡邉さんに確認中
+
+★自Redmineのwiki整理
+・でんデンAPL⇒iOS Projects　っていうプロジェクトを作成
+・Validationのチケットを移動
+⇒移動完了
+
+= FBCryptAESのFrameworkが動かない問題
+★★FBCryptAESのFrameworkが動かない
+⇒調査中（15:30~）
+　　#import <FBCryptAESLibrary-iOS/FBEncryptorAES.h>
+　で読み込んでいるが、NSData+Base64のカテゴリのメソッドへのメッセージ送信で失敗してる。
+　⇒どういうことだ？？
+⇒-all_loadオプションをother linker flagsに入れると今度はビルドエラーになった。
+　確かにFBCryptAESクラスのメソッドはちゃんと呼べていることを考えると、2重の呼び出しになっている。。
+　なぜCategoryのメソッドだけが呼ばれない？？
+　⇒Framework作成時、NSData+Base64クラスのコンパイルがされていないのでは？ビルドログを確認だ！
+　　⇒あまり得るものは無かった
+　⇒なんと実機だと動いた。
+　　Simulator用の（つまりi386用の）メソッドだけ重複してるということか。
+　⇒Simulator向けにビルドした.aファイルをimportしてみたら同じエラー。
+　　ということは、FBCryptAESのFrameworkを作る時点で失敗してる。
+
+★TM6つ、保守4つ
+⇒近藤に依頼
+
+★Appledocを使ってみる！
+⇒FBCryptAESに組み込む。
+
+★でんデンにリリース用のplistをsvn管理する
+⇒
+  
+★でんデンv3.1.2.2/v3.1.3.1のリリースに向けたBuildの設定確認
+・Jenkinsを使ってビルド
+・ipaとplistをSTにおいて動作確認
+
+★リリース手順書の作成
+  
+★wikiに書く
+　・UIAutomationのデモ  
+　・
+
+★渡邉さんの成果物チェック
+
+★リリース時の手順書追加項目
+・iMASで確認できるでんデン
+　でんデン（新）3.1.3.1
+　でんデン（旧）3.1.2.2

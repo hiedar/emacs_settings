@@ -1,0 +1,85 @@
+
+((digest . "0522c0554e8a6d44b08bdcc79e95e8d8") (undo-list (300 . 301) nil (nil rear-nonsticky nil 299 . 300) (nil fontified nil 236 . 300) (236 . 300) nil (234 . 236) nil (nil rear-nonsticky nil 233 . 234) (nil fontified nil 128 . 234) (128 . 234) nil ("%cursor" . -106) ("%file" . -133) (114 . 132) ("%date" . -114) ("%title" . -106) (104 . 133) ("= 
+[2013-10-04 16:28] 
+
+" . 104) 106 nil ("%cursor" . -106) ("%file" . -133) (114 . 132) ("%date" . -114) ("%title" . -106) (103 . 133) ("
+" . 103) 1 (t 21070 5837 0 0) nil (#("SELECT  application_nbr,location_zip,LOCATION_PREF_NM,LOCATION_ADDR_CITY,
+LOCATION_ADDR_STREET,LOCATION_ADDR_BLOCK,LOCATION_ADDR,LOCATION_ADDR_GO,LOCATION_ADDR_SUB,LOCATION_ADDR_SUB_KN,LOCATION_ADDR_ROOM_NB,LOCATION_PHONE_NBR,VCCONTACTPHONE,location_shop_nm  FROM tb_general_csv_info
+where vcstatusgroupname like '%調整%'
+and
+location_pref_nm like '東京都'
+and 
+location_addr_city like '港区'
+and
+location_addr_street like '新橋';" 0 24 (fontified t) 24 37 (fontified t) 37 54 (fontified t) 54 74 (fontified t) 74 95 (fontified t) 95 115 (fontified t) 115 129 (fontified t) 129 146 (fontified t) 146 164 (fontified t) 164 185 (fontified t) 185 207 (fontified t) 207 226 (fontified t) 226 241 (fontified t) 241 257 (fontified t) 257 284 (fontified t) 284 320 (fontified t) 320 386 (fontified t) 386 420 (fontified t) 420 421 (fontified t rear-nonsticky t)) . 104) 525 nil (#("
+" 0 1 (fontified t)) . -361) nil (#("
+" 0 1 (fontified nil)) . -345) (346 . 346) (#("
+" 0 1 (fontified nil)) . -330) (331 . 331) (#("
+" 0 1 (fontified nil)) . -311) (312 . 312) (#("
+" 0 1 (fontified nil)) . -289) (290 . 290) (#("
+" 0 1 (fontified nil)) . -268) (269 . 269) (#("
+" 0 1 (fontified nil)) . -250) (251 . 251) (#("
+" 0 1 (fontified nil)) . -233) (234 . 234) (#("
+" 0 1 (fontified nil)) . -219) (220 . 220) (#("
+" 0 1 (fontified t)) . -199) (200 . 200) nil (#("
+" 0 1 (fontified t)) . -158) nil (#("
+" 0 1 (fontified t)) . -141) nil (#("        " 0 8 (fontified t)) . 356) (#("        " 0 8 (fontified t)) . 340) (#("        " 0 8 (fontified t)) . 320) (#("        " 0 8 (fontified t)) . 297) (#("        " 0 8 (fontified t)) . 275) (#("        " 0 8 (fontified t)) . 256) (#("        " 0 8 (fontified t)) . 238) (#("        " 0 8 (fontified t)) . 223) (#("        " 0 8 (fontified t)) . 202) (#("        " 0 8 (fontified t)) . 180) (#("        " 0 8 (fontified t)) . 160) (#("        " 0 8 (fontified t)) . 142) (apply 0 142 451 cua--rect-undo-handler [142 468 0 7 3 0 t nil] t 142 451) nil (#("
+" 0 1 (fontified t)) . -128) nil (#(" " 0 1 (fontified t)) . -129) nil (#(" " 0 1 (fontified t)) . -130) nil (#(" " 0 1 (fontified t)) . -131) nil (#(" " 0 1 (fontified t)) . -132) nil (#(" " 0 1 (fontified t)) . -133) nil (#(" " 0 1 (fontified t)) . -134) nil (#(" " 0 1 (fontified t)) . -135) nil (#(" " 0 1 (fontified t)) . -136) nil (nil rear-nonsticky nil 641 . 642) (nil fontified nil 104 . 642) (104 . 642) (t 21070 603 0 0) nil (102 . 104) nil (85 . 93) nil (#("テーブル設計して" 0 8 (fontified t)) . -85) (85 . 93) (#("てーぶるせっけいして" 0 10 (fontified t)) . -85) (85 . 95) (#("てーぶるせっけいしt" 0 10 (fontified t)) . -85) (85 . 95) (#("てーぶるせっけいし" 0 9 (fontified t)) . -85) (85 . 94) (#("てーぶるせっけいs" 0 9 (fontified t)) . -85) (85 . 94) (#("てーぶるせっけい" 0 8 (fontified t)) . -85) (85 . 93) (#("てーぶるせっけ" 0 7 (fontified t)) . -85) (85 . 92) (#("てーぶるせっk" 0 7 (fontified t)) . -85) (85 . 92) (#("てーぶるせk" 0 6 (fontified t)) . -85) (85 . 91) (#("てーぶるせ" 0 5 (fontified t)) . -85) (85 . 90) (#("てーぶるs" 0 5 (fontified t)) . -85) (85 . 90) (#("てーぶる" 0 4 (fontified t)) . -85) (85 . 89) (#("てーぶr" 0 4 (fontified t)) . -85) (85 . 89) (#("てーぶ" 0 3 (fontified t)) . -85) (85 . 88) (#("てーb" 0 3 (fontified t)) . -85) (85 . 88) (#("てー" 0 2 (fontified t)) . -85) (85 . 87) (#("て" 0 1 (fontified t)) . -85) (85 . 86) (#("t" 0 1 (fontified t)) . -85) (85 . 86) 94 nil (93 . 94) (#("。" 0 1 (fontified t)) . -93) (88 . 94) (#("作んなきゃ" 0 5 (fontified t)) . -88) (88 . 93) (#("つくんなきゃ" 0 6 (fontified t)) . -88) (88 . 94) (#("つくんなky" 0 6 (fontified t)) . -88) (88 . 94) (#("つくんなk" 0 5 (fontified t)) . -88) (88 . 93) (#("つくんな" 0 4 (fontified t)) . -88) (88 . 92) (#("つくんn" 0 4 (fontified t)) . -88) (88 . 92) (#("つくん" 0 3 (fontified t)) . -88) (88 . 91) (#("つくn" 0 3 (fontified t)) . -88) (88 . 91) (#("つく" 0 2 (fontified t)) . -88) (88 . 90) (#("つk" 0 2 (fontified t)) . -88) (88 . 90) (#("つ" 0 1 (fontified t)) . -88) (88 . 89) (#("t" 0 1 (fontified t)) . -88) (85 . 89) (t 21070 581 0 0) nil (10 . 15) (#("思ったこと" 0 5 (face (howm-mode-title-face) fontified t)) . -10) (10 . 15) (#("おもったこと" 0 6 (face (howm-mode-title-face) fontified t)) . -10) (10 . 16) (#("おもったこt" 0 6 (face (howm-mode-title-face) fontified t)) . -10) (10 . 16) (#("おもったこ" 0 5 (face (howm-mode-title-face) fontified t)) . -10) (10 . 15) (#("おもったk" 0 5 (face (howm-mode-title-face) fontified t)) . -10) (10 . 15) (#("おもった" 0 4 (face (howm-mode-title-face) fontified t)) . -10) (10 . 14) (#("おもっt" 0 4 (face (howm-mode-title-face) fontified t)) . -10) (10 . 14) (#("おもt" 0 3 (face (howm-mode-title-face) fontified t)) . -10) (10 . 13) (#("おも" 0 2 (face (howm-mode-title-face) fontified t)) . -10) (10 . 12) (#("おm" 0 2 (face (howm-mode-title-face) fontified t)) . -10) (10 . 12) (#("お" 0 1 (face (howm-mode-title-face) fontified t)) . -10) (8 . 11) (#("みて" 0 2 (face (howm-mode-title-face) fontified t)) . -8) (8 . 10) (#("みt" 0 2 (face (howm-mode-title-face) fontified t)) . -8) (8 . 10) (#("み" 0 1 (face (howm-mode-title-face) fontified t)) . -8) (8 . 9) (#("m" 0 1 (face (howm-mode-title-face) fontified t)) . -8) (5 . 9) (#("の" 0 1 (face (howm-mode-title-face) fontified t)) . -5) (5 . 6) (#("n" 0 1 (face (howm-mode-title-face) fontified t)) . -5) (3 . 6) (t 21070 570 0 0) nil (#("
+" 0 1 (fontified t)) . -72) nil (#("
+" 0 1 (fontified t)) . 73) nil (#("　⇒いる" 0 4 (fontified t)) . 73) nil (#("
+" 0 1 (fontified t)) . 73) nil (#("TB_MST_COMPANY" 0 14 (fontified t)) . 73) nil (45 . 64) nil (44 . 45) nil (72 . 74) nil (70 . 72) (#("いる" 0 2 (fontified t)) . -70) (70 . 72) (#("いr" 0 2 (fontified t)) . -70) (70 . 72) (#("い" 0 1 (fontified t)) . -70) (69 . 71) (#("⇒" 0 1 (fontified t)) . -69) (69 . 70) (#("み" 0 1 (fontified t)) . -69) (69 . 70) (#("m" 0 1 (fontified t)) . -69) (68 . 70) nil (67 . 68) nil (53 . 67) nil (51 . 53) nil (47 . 51) (#("いらない" 0 4 (fontified t)) . -47) (47 . 51) (#("いらな" 0 3 (fontified t)) . -47) (47 . 50) (#("いらn" 0 3 (fontified t)) . -47) (47 . 50) (#("いら" 0 2 (fontified t)) . -47) (47 . 49) (#("いr" 0 2 (fontified t)) . -47) (47 . 49) (#("い" 0 1 (fontified t)) . -47) (46 . 48) nil (#("⇒" 0 1 (fontified t)) . -46) (46 . 47) (#("み" 0 1 (fontified t)) . -46) (46 . 47) (#("m" 0 1 (fontified t)) . -46) (46 . 47) (#("み" 0 1 (fontified t)) . -46) nil (46 . 47) (#("み" 0 1 (fontified t)) . -46) (46 . 47) (#("m" 0 1 (fontified t)) . -46) (45 . 47) nil (44 . 45) nil (25 . 44) nil (#("
+
+h1. Wiki
+
+{{>TOC}}
+
+〔保守ツール〕ログフォーマット
+　　written by Hieda
+　　作成:2013/07/16
+　　修正:2013/07/18
+　　　ログの種類、フォーマット修正
+
+■フィールドツールで残すログの種類
+　1.ネイティブアプリの起動、終了
+　　-アプリがフォアグラウンドになった
+　　-アプリがバックグラウンドになった
+　　の2種類。
+　2.ネイティブアプリ内の画面遷移
+　3.Webアプリケーションのボタンタップ
+　　⇒ログ専用URIをWebアプリ内でcallすると発動
+　4.位置情報
+　　iOS側で位置情報が更新される度にログ。（フォア、バック両方。アプリが起動中は常に。）
+　　位置情報は・・・WGS 84 reference frame。
+　5.WiFi／3G
+　　1〜4のログ情報が出力される時に付随してログ。
+　　Wi-Fi/3G・LTE/NoConnection/Other　のいずれか。
+　6.電池残量
+　　1〜4のログ情報が出力される時に付随してログ。
+　　5%刻みで表示。あまり正確な値は取れないので、参考値。
+　7.機種名
+　　「iPad2.2」等。プログラムで取れる形でロギング。
+　8.OS種類
+　　「iPhoneOS」等。クロスプラットフォーム時に有用？
+　9.OSバージョン
+　　「6.0.1」等。
+　10.端末MACアドレス
+　11.業者コード、スタッフコード
+　12.syslogのPRI値
+　　⇒182で固定（22 * 8 + 6）。Facility:22（local use 6）、Severity:6（情報提供）
+　　　※http://www.amris.co.jp/netdocs/rfc3164_j.html
+　13.フィールドメモ（暫定）
+　　⇒下記、「■フィールドメモフォーマット」を参照
+
+■操作イベント、メモイベントフォーマット
+<182><Mon dd HH:MM:SS> <会社コード> <スタッフコード> FieldToolLog <機種名> <OS種類> <OSバージョン> <アプリ状態> <ネットワーク状態> <電池状態> Location,<井戸>,<軽度> {\"event\":\"eventName\",\"contents\":\"event contents.\"}
+
+例：位置情報更新イベント
+Jul 18 11:30:50 pw126214192079.1.panda-world.ne.jp (null) (null) 04:54:53:A9:DB:4C FieldToolLog iPad2.2 iPhone OS 6.0.1 Active 3G/LET 100%  Location,35.661993,139.759950
+
+例：詳細ボタンタップイベント
+Jul 30 18:2:40 SBM%B6%A8%08FT%09 102 70:11:24:4C:6E:D5 FieldToolLog iPad2.5 iPhone OS 6.0.2 Active WiFi 90% Location,35.662830,139.759544  {\"event\":\"order_detail_showed\",\"contents\":\"\"}
+
+例：フィールドメモ
+<182><Mon dd HH:MM:SS> <会社コード> <スタッフコード> FieldToolLog <機種名> <OS種類> <OSバージョン> <アプリ状態> <ネットワーク状態> <電池状態> Location,<緯度>,<経度>  {\"event\":\"memo\",\"contents\":\"This is sample memo.\"}
+
+EOF" 0 1 (fontified t) 1 2 (fontified t) 2 11 (fontified t) 11 12 (fontified t) 12 19 (fontified t) 19 20 (rear-nonsticky t fontified t) 20 21 (fontified t) 21 22 (fontified t) 22 528 (fontified t) 528 706 (fontified t) 706 751 (face (action-lock-face) fontified t) 751 1173 (fontified t) 1173 1560 (fontified t) 1560 1562 (fontified t) 1562 1563 (fontified t rear-nonsticky t)) . -25) nil (nil rear-nonsticky nil 44 . 45) (nil fontified nil 37 . 45) (37 . 45) nil (36 . 38) nil undo-tree-canary))

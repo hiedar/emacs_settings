@@ -1,0 +1,32 @@
+勤務時間:8:30~
+= 
+[2012-04-24 10:23] 
+
+★でんデンv3.0.11商用デプロイ
+　・ST用DBの値を書き換えて終了。テーブル名TB_MST_APPLICATION
+　　⇒VCVERSION
+　　⇒VCAPPFILEPATH
+
+★iMASのiPad版の開発
+　・画面設計
+　　イメージは一夜城。ただし、メニューのドリルダウンをさせたい場合、1画面に複数のViewControllerが必要。
+　　
+　・MGSplitViewController
+　　Twitterエンジンの開発者が作った、iPad用のSplitViewControllerライクな動きをするクラス。
+　　使えそうだ。
+
+　・業者端末を全部iOS5にしてもらえばすごく助かるのだが。
+　　⇒桶川さん経由でミツさんに連絡してもらうことになった。
+　　　現状iOS5の方が多いが、iOS4も半数近くいるという結果。
+　　　気にしなくてはならないのが、iOS5にすることにより他の業務アプリに影響はないかどうかということ。品質チェッカーなどが気になる。
+
+　・そういえば、iPad初代だとカメラが使えないことも考慮しなくては。
+
+★UIPopUpViewController、MGSplitViewController
+　上記2つを自由に使えるようにしなくてはならない。
+　・PopUp
+　　PopupするViewのheight、widthはどのように決定されるのか。
+
+★ARC、iOS5以降で使用できるblocks利用メソッドを調査
+　・NSURLConnection
+　・NSXMLParser

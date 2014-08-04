@@ -1,0 +1,25 @@
+= MacにHomebrewインストール
+[2013-12-18 10:00] 
+〔参考〕
+http://brew.sh/index_ja.html
+
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+Xcode command line developer toolsをインストールしていなかったのか、インストールを迫られた。ので、インストール
+
+= Macにbrewでtreeをインストール
+[2013-12-18 11:29] 
+〔参考〕
+http://codenote.net/mac/homebrew/643.html
+
+brew install tree
+
+= Treeの文字化けを防ぐ
+[2013-12-18 11:33]
+〔参考〕
+http://lol.doorblog.jp/archives/19404129.html
+
+tree -d .
+⇒これだと日本語が文字化けを起こしてしまう。
+tree -N -d .
+⇒「-N」オプションで文字化け解消。
+

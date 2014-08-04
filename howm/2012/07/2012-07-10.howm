@@ -1,0 +1,22 @@
+10:00~
+= 
+[2012-07-10 14:39] 
+
+★git-svn手順
+xcodeプロジェクト作成
+svnリボジトリ作成(branches,tags,trunk)
+trunkに作成したxcodeプロジェクトimport
+importしたプロジェクトをcheckout
+サーバに適当なgitリポジトリを作成
+checkoutしてきたプロジェクトを作成したgitリポジトリにpush
+
+# ここまでで現状のプロジェクトの状態を再現完了
+
+checkoutしてきたプロジェクトの.svnディレクトリを全部削除
+svnリボジトリ作成(branches,tags,trunk)
+trunkに.svnを全て削除したxcodeプロジェクトimport
+git-svnでsvnに上げたprojectをclone
+適当に変えてgit push
+git svn dcommit
+
+

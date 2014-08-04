@@ -1,0 +1,8 @@
+
+((digest . "f1345a65eddab3a5f776989274ec4fc4") (undo-list (414 . 415) nil (nil rear-nonsticky nil 413 . 414) (nil fontified nil 1 . 414) (1 . 414) (#(";; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+http://ec5.mb.softbank.jp/GST/installation_photo
+http://st-ec5.dev01.local/GST/installation_photo
+" 0 3 (fontified t face font-lock-comment-delimiter-face) 3 77 (fontified t face font-lock-comment-face) 77 80 (fontified t face font-lock-comment-delimiter-face) 80 140 (fontified t face font-lock-comment-face) 140 143 (fontified t face font-lock-comment-delimiter-face) 143 190 (fontified t face font-lock-comment-face) 190 191 (fontified t) 191 239 (fontified t) 239 240 (fontified t rear-nonsticky t) 240 288 (fontified t) 288 289 (fontified t rear-nonsticky t)) . 1) ((marker . 414) . -191) ((marker . 1) . -289) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -240) ((marker . 1) . -278) ((marker . 1) . -191) ((marker . 1) . -270) ((marker . 1) . -240) ((marker . 1) . -283) ((marker . 1) . -240) ((marker . 1) . -283) ((marker . 1) . -289) ((marker . 1) . -240) ((marker . 1) . -289) nil undo-tree-canary))

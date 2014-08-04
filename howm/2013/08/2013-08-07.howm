@@ -1,0 +1,106 @@
+= GTD on Omni Focus
+[2013-08-07 07:59] 
+
+◆GTD
+1. 収集
+　Inboxに思いついたことをどんどん書いていく
+
+2. 見極め
+　Inboxの項目ついて、まず「何かしないといけないか」を考えます。答えが「Yes」の場合は、その「望むべき結果」と「次に取るべき行動」を考えます。そして、それぞれを項目に書き出して、「望むべき結果」に対しては「11. My Desired Outcome」、「次に取るべき行動」に対しては「12. The Next Action」を、プロジェクトに割り当てます。
+
+　答えが「No」だった場合は、それが「自分にとって意味のないもの」か「とりあえず保留しておくもの」か「資料として意味のあるもの」かを考え、それぞれに「21. It’s Meaningless」「22. It’s to Hold On, Until a Later Time」「23. It’s Reference」を割り当てます。「It’s Meaningless」に該当するものは、その場で削除するため、実際には項目が登録されることはありません。
+
+　すべての項目にプロジェクトを割り当てると「見極め」のステップは完了です。
+
+3. 整理
+
+= todo
+[2013-08-07 12:37] 
+・業務MTGのフィードバック(from 神野)
+　メール
+　　議事録
+　　資料
+　Redmine反映
+
+・Redmineの整理
+
+√・#167
+　地図のズームレベル　各アクションのズームレベル設計の確認とチケットクローズを。　
+
+√・#261
+　ログイン後のログに残る日本語が文字化けする
+
+= setting up github
+[2013-08-07 13:53] 
+◆username
+git config --global user.name "ryuichi"
+◆email
+git config --global user.email "ryuichi.hieda@gmail.com"
+◆password caching
+git credential-osxkeychain
+curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+chmod u+x git-credential-osxkeychain
+sudo mv git-credential-osxkeychain "$(dirname $(which git))/git-credential-osxkeychain"
+git config --global credential.helper osxkeychain
+
+# これはあきらめた。 /Applications/Emacs.app/Contentx/MacOS/Emacs -nwで起動しても変な感じ。
+◆最新版emacsのインストール
+curl -O http://ftp.gnu.org/pub/gnu/emacs/emacs-24.3.tar.gz
+⇒バージョンは、http://www.gnu.org/software/emacs/ここで調べよう。
+
+tar xvf emacs-24.3.tar.gz
+cd emacs-24.3
+./configure --without-x
+make
+sudo make install
+
+= bitnami redmine移行方法
+[2013-08-07 16:40] 
+
+・mysqldumpで「bitnami_redmine」のダンプを取る
+　>mysqldump -u root -p bitnami_redmine > 130807dump.sql
+・移行先に空のDB「bitnami_redmine」を作成する（元々ある場合削除）
+　>mysql> drop database bitnami_redmine;
+　>mysql> create database bitnami_redmine;
+・mysqlコマンドで、ダンプファイルからbitnami_redmineを作成する
+　>mysql -u root -p bitnami_redmine < 130807dump.sql
+
+= 環境構築リスト
+[2013-08-07 23:44] 
+
+◆ドライバ
+HHKBドライバ
+logicool control center
+
+◆ユーティリティ
+Day-O
+Dropbox
+xtraFinder
+TogglDesktop
+keyremap4macbook
+divvy
+cheetsheet
+evernote
+
+◆フォント
+SourceCodePro
+
+◆開発関連
+eclipse
+pleiades
+xcode
+iTerm2
+sqldeveloper
+mysqlbench
+
+◆エディタ
+emacs
+
+◆ブラウザ
+chrome
+
+◆オフィス
+Office2011
+
+◆画像処理
+paintbrush

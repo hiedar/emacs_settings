@@ -1,0 +1,134 @@
+= 
+[2013-08-23 11:03] 
+
+  844BF5FC9128,ＢＡＲＯＮＳ－ＩＣＨＩ
+  9C2A70A45CF0,ソルアミーゴ銀座店,
+  844BF5F864C8,金銀彩
+  9C2A709A1B60,ＣＡＲＤＥＮＡＳ　ＧＩＮＺＡ
+  844BF5E3A518,銀座サロン
+  60F494ECF230,有限会社　鳥繁
+  60F494E3C818,銀座トリヰ
+  9C2A708B6CF0,ディピュア　銀座店
+  844BF5E1B888,ビースリー　銀座店
+  60F494EE79E0,銀座ロビー
+  60F494EEE088,銀座ロビー
+  9C2A70E78AB8,銀座コアＩＣＴトレーニングセンター
+  60F494E46F70,ミュージックアベニュー銀座
+  844BF5042AA0,オーデマピゲブティック銀座１階
+  60F494E70D90,ミュージックアベニュー銀座
+  844BF5EB3EE0,Ｓｐｅｅｄ　ＧＩＮＺＡ
+  60F494E48500,ヤマハ銀座店
+  9C2A70E432F8,株式会社第一グリーン
+  844BF5E3A620,Ｙｏｕ膳
+  60F494EA3B50,ＧＩＮＺＡ　ナカヤ
+  9C2A70E4E668,かまくら銀座店
+  60F494F9E728,ギンザ　ベルエトリール
+  60F494E760E8,ミュージックアベニュー銀座
+  E006E68ED028,オーデマピゲブティック銀座２階
+  60F494E00590,銀座本店　１Ｆ
+  60F494E2B2B0,銀座ｂｙ　ｋａｗａｒａＣＡＦＥ＆ＤＩＮＩＮＧ
+  844BF5FFB030,梨紗ＣＬＵＢ
+  60F494DFFF48,銀座本店　Ｂ１
+  60F494EC5708,ヤマハ銀座店
+  60F494EAACC0,サッスーンカット銀座
+  60F494E01B38,銀座本店　４Ｆ
+  9C2A70E17918,青　ｈａｒｕ
+  9C2A708B6F78,ラフィネ　銀座店
+  844BF5DDEC58,ＣＨＡＲＬＥＹ’Ｓ　ＢＡＲ
+  9C2A709917C8,ノア　カフェ
+  60F494ED8590,銀座ポルトファーロ本店
+  60F494F18FE8,銀座４丁目店
+  844BF505F630,ダロワイヨ銀座本店
+  9C2A70A450C0,フット専門店　ロワ
+  9C2A70EAD9F0,銀座通支店（１Ｆ＿ＡＴＭ）
+
+<SHOP_NMがnullのAP_MACを検索>
+ select distinct ap_mac  from tb_trn_hourly_probe_info where shop_nm is null
+
+<UPDATE一覧>
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ＢＡＲＯＮＳ－ＩＣＨＩ' WHERE AP_MAC = '844BF5FC9128';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ソルアミーゴ銀座店' WHERE AP_MAC = '9C2A70A45CF0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '金銀彩' WHERE AP_MAC = '844BF5F864C8';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ＣＡＲＤＥＮＡＳ　ＧＩＮＺＡ' WHERE AP_MAC = '9C2A709A1B60';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座サロン' WHERE AP_MAC = '844BF5E3A518';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '有限会社　鳥繁' WHERE AP_MAC = '60F494ECF230';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座トリヰ' WHERE AP_MAC = '60F494E3C818';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ディピュア　銀座店' WHERE AP_MAC = '9C2A708B6CF0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ビースリー　銀座店' WHERE AP_MAC = '844BF5E1B888';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座ロビー' WHERE AP_MAC = '60F494EE79E0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座ロビー' WHERE AP_MAC = '60F494EEE088';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座コアＩＣＴトレーニングセンター' WHERE AP_MAC = '9C2A70E78AB8';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ミュージックアベニュー銀座' WHERE AP_MAC = '60F494E46F70';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'オーデマピゲブティック銀座１階' WHERE AP_MAC = '844BF5042AA0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ミュージックアベニュー銀座' WHERE AP_MAC = '60F494E70D90';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'Ｓｐｅｅｄ　ＧＩＮＺＡ' WHERE AP_MAC = '844BF5EB3EE0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ヤマハ銀座店' WHERE AP_MAC = '60F494E48500';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '株式会社第一グリーン' WHERE AP_MAC = '9C2A70E432F8';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'Ｙｏｕ膳' WHERE AP_MAC = '844BF5E3A620';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ＧＩＮＺＡ　ナカヤ' WHERE AP_MAC = '60F494EA3B50';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'かまくら銀座店' WHERE AP_MAC = '9C2A70E4E668';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ギンザ　ベルエトリール' WHERE AP_MAC = '60F494F9E728';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ミュージックアベニュー銀座' WHERE AP_MAC = '60F494E760E8';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'オーデマピゲブティック銀座２階' WHERE AP_MAC = 'E006E68ED028';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座本店　１Ｆ' WHERE AP_MAC = '60F494E00590';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座ｂｙ　ｋａｗａｒａＣＡＦＥ＆ＤＩＮＩＮＧ' WHERE AP_MAC = '60F494E2B2B0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '梨紗ＣＬＵＢ' WHERE AP_MAC = '844BF5FFB030';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座本店　Ｂ１' WHERE AP_MAC = '60F494DFFF48';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ヤマハ銀座店' WHERE AP_MAC = '60F494EC5708';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'サッスーンカット銀座' WHERE AP_MAC = '60F494EAACC0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座本店　４Ｆ' WHERE AP_MAC = '60F494E01B38';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '青　ｈａｒｕ' WHERE AP_MAC = '9C2A70E17918';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ラフィネ　銀座店' WHERE AP_MAC = '9C2A708B6F78';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ＣＨＡＲＬＥＹ’Ｓ　ＢＡＲ' WHERE AP_MAC = '844BF5DDEC58';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ノア　カフェ' WHERE AP_MAC = '9C2A709917C8';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座ポルトファーロ本店' WHERE AP_MAC = '60F494ED8590';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座４丁目店' WHERE AP_MAC = '60F494F18FE8';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'ダロワイヨ銀座本店' WHERE AP_MAC = '844BF505F630';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = 'フット専門店　ロワ' WHERE AP_MAC = '9C2A70A450C0';
+UPDATE tb_trn_hourly_probe_info SET SHOP_NM = '銀座通支店（１Ｆ＿ＡＴＭ）' WHERE AP_MAC = '9C2A70EAD9F0';
+
+= メール下書き
+[2013-08-23 12:43] 
+
+桶川さん、駒村さん
+お疲れ様です。檜枝です。
+
+9/19（木）セミナー参加希望の連絡です。
+
+下記のセミナーに参加したいのですが、経費申請できますか？
+http://www.ric.co.jp/expo/ws2013/30/
+
+現在の業務との関連：
+　現在「フィールドツール」としてNative+Webアプリでの開発を推進していますが、業務アプリのNative⇒Webの流れが来ており、その開発体制やメンバーの育成法を確立することが急務です。本セミナーではその先駆けをしている企業のtipsが聞けます。
+
+本セミナーでゲットできるPDFは社内展開しようと思います。
+
+以上です、ご検討お願いいたします。
+
+= 
+[2013-08-23 15:11] 
+
+・機器の設置場所を忘れた
+・以前の契約内容忘れた
+・必要な機器を持ってきていない
+
+・保守オーダーの紙を持って行っており、紙だったので、後続のてんデン登録時に、（バーコード読み込み時）間違って違う店舗として登録してしまうケースがある。
+
+・駅からのルートがわからない
+・入口がどこかわからない
+・お店が無い/名称変更
+・Outageとしてあがってきていたが、
+　レターで解消されていたとしても
+　保守にいってしまっている。
+・住所が不正確
+・適切な設置場所がわからない
+
+・機器の設置場所を忘れた
+・以前の契約内容忘れた
+・必要な機器を持ってきていない。
+
+= 
+[2013-08-23 17:37] 
+
+・FT②の報告まとめ
+　

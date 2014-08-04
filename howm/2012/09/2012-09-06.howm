@@ -1,0 +1,35 @@
+9:45~19:45
+= 
+[2012-09-06 10:07] 
+
+★iPhoneの開発者登録
+⇒アクティベーションしないままiOS6にしたらiOS6でアクティベーションできなかったので、
+　iOS5に戻してiOS6にアプデした。
+　⇒完了
+
+★OCMockについて調べる
+⇒OCMockの使い方は分かったが、俺がやりたいのはUIAutomationをやってる時のFemcoサーバのMock化だから、ちょっと違うかも。こういうのってどうやってテストすればいいんだろう。。。
+
+★iMASの二重化についての確認
+⇒確認完了
+
+★今週の発表
+⇒終了
+
+= iOS Frameworkの作成
+★FBCryptAESのプロジェクトをFramework化する
+⇒
+　http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/
+　完了した。感動。Frameworkができた！
+
+★JenkinsPluginの設定
+MavenのProjectを設定したらEclipseでエラーはいてたのを、清水さんのAdviceで実行できた。
+Jettyっていう軽量ApplicationServerで実行させた。
+
+★UIAutomationのデモ用のプロジェクト用意
+⇒そのまま渡邉さんのTutorialを使えばいいか。
+
+★Appledocを使ってみる！
+⇒FBCryptAESに組み込む。
+
+

@@ -200,3 +200,16 @@
 (setq auto-insert-directory "~/.emacs.d/auto-insert/")
 ;; html
 (define-auto-insert "\\.html$" "html-template.html")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;; YASNIPPET ;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path
+             (expand-file-name "~/.emacs.d/snippets"))
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/mySnippets"
+        "~/.emacs.d/snippets"
+        ))
+(yas-global-mode 1)

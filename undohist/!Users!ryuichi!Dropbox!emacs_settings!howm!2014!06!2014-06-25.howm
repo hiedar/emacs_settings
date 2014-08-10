@@ -1,5 +1,0 @@
-
-((digest . "f889873022151828070d9b3a4987e43c") (undo-list nil (#("i" 0 1 (fontified t)) . -24) nil (#("n" 0 1 (fontified t)) . -25) nil (#("i" 0 1 (fontified t)) . -26) nil (#("t" 0 1 (fontified t)) . -27) nil (24 . 28) nil (22 . 24) nil (#(" >>> ~/Dropbox/emacs_settings/howm/0000-00-00-000000.howm" 0 1 (fontified t) 1 57 (fontified t face (howm-mode-ref-face action-lock-face))) . 22) ((marker) . -57) nil ("%cursor" . -3) (30 . 86) ("%file" . -30) (11 . 29) ("%date" . -11) ("%title" . -3) (1 . 30) ("= 
-[2014-06-25 14:25] 
-
-" . 1) 3 ((marker . 1) . -24) nil ("%cursor" . -3) ("%file" . -30) (11 . 29) ("%date" . -11) ("%title" . -3) (1 . 30) (t 0 0 0 -1000)))

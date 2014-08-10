@@ -1,2 +1,0 @@
-
-((digest . "a3da7a9d936eb84ae4573dd2188b0f85") (undo-list (18880 . 18881)))

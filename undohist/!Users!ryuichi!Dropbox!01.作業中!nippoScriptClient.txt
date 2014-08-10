@@ -1,6 +1,0 @@
-
-((digest . "d5836c4a66e04e7a9ce0337f51a91a08") (undo-list nil (nil rear-nonsticky nil 11861 . 11862) (nil fontified nil 1 . 11862) (1 . 11862) nil (#(";; This buffer is for notes you don't want to save, and for Lisp evaluation.
-;; If you want to create a file, visit that file with C-x C-f,
-;; then enter the text in that file's own buffer.
-
-" 0 3 (fontified t face font-lock-comment-delimiter-face) 3 77 (fontified t face font-lock-comment-face) 77 80 (fontified t face font-lock-comment-delimiter-face) 80 140 (fontified t face font-lock-comment-face) 140 143 (fontified t face font-lock-comment-delimiter-face) 143 190 (fontified t face font-lock-comment-face) 190 191 (fontified t)) . 1) (t . 0) ((marker) . -77) ((marker) . -77) ((marker) . -140) ((marker) . -140) ((marker) . -190) ((marker) . -190) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 1) . -191) ((marker . 11862) . -191) ((marker . 1) . -191) ((marker . 1) . -191) nil (1 . 192) (t . 0)))

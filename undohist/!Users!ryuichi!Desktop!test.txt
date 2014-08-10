@@ -1,6 +1,0 @@
-
-((digest . "1f32a405444be51dd9252d2bbd59b77d") (undo-list nil (55 . 60) nil (55 . 57) (t . 1368706359) nil (55 . 63) nil (53 . 55) (t . 1368706339) nil (46 . 53) nil (44 . 46) (t . 1368706146) nil (44 . 45) nil (33 . 44) nil (31 . 33) nil (21 . 31) nil (#("l" 0 1 (fontified t)) . -21) nil (17 . 22) nil (15 . 17) nil (1 . 15) nil (#(";; This buffer is for notes you don't want to save, and for Lisp evaluation.
-;; If you want to create a file, visit that file with C-x C-f,
-;; then enter the text in that file's own buffer.
-
-" 0 3 (fontified t face font-lock-comment-delimiter-face) 3 77 (fontified t face font-lock-comment-face) 77 80 (fontified t face font-lock-comment-delimiter-face) 80 140 (fontified t face font-lock-comment-face) 140 143 (fontified t face font-lock-comment-delimiter-face) 143 190 (fontified t face font-lock-comment-face) 190 191 (fontified t)) . 1) (t . 0) ((marker . 46) . -191) ((marker . 940) . -191) ((marker . 55) . -191) ((marker . 1) . -191) nil (1 . 192) (t . 0)))

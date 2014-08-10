@@ -1,3 +1,0 @@
-
-((digest . "e79429e451e404636283c06d5de8a5dd") (undo-list nil (110 . 160) nil (109 . 110) (t 21136 50387 0 0) nil ("
-" . 50) nil ("mbp 	MacBook Pro 	名詞 	131124 converted from Kotoeri" . 50) ((marker . 160) . -3) nil (50 . 101) nil (49 . 50) (t 21136 50320 0 0)))

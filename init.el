@@ -47,7 +47,7 @@
 ;; (add-to-list 'exec-path "~/bin")
 
 ;; load-path
-(add-to-load-path "elisp" "conf" "public_repos" "elpa")
+(add-to-load-path "elisp" "conf" "elpa")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;; LANGUAGE SETTINGS ;;;;;;;;;
@@ -65,7 +65,7 @@
   (setq locale-coding-system 'utf-8-hfs))
 
 ;;  Windows
-(when (eq system-type 'w32)
+(when (eq system-type 'windows-nt)
   (set-file-name-coding-system 'cp932)
   (setq locale-coding-system 'cp932))
 
@@ -115,7 +115,7 @@
 ;;;;;;;;;;;;;; LOOKING ;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(set-cursor-color 'palegreen1)
+;;(set-cursor-color 'palegreen1)
 (defface my-hl-line-face
   ;; 背景がdarkならば背景色を紺に
   '((((class color) (background dark))
@@ -132,9 +132,15 @@
                     :family "Source Code Pro"
                     :height 120)
 
-(set-fontset-font
- nil 'japanese-jisx0208
- (font-spec :family "ヒラギノ角ゴ Pro"))
+(when (eq system-type 'darwin)
+  (set-fontset-font
+   nil 'japanese-jisx0208
+   (font-spec :family "ヒラギノ角ゴ Pro")))
+(when (eq system-type 'windows-nt)
+  (set-fontset-font
+   nil 'japanese-jisx0208
+   (font-spec :family "メイリオ")))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;; AUTO INSTALL ;;;;;;;;;;;;
@@ -142,7 +148,7 @@
 
 (when (require 'auto-install nil t)
   (setq auto-install-directory "~/.emacs.d/elisp/")
-  (auto-install-update-emacswiki-package-name t)
+  ;;(auto-install-update-emacswiki-package-name t)
   (auto-install-compatibility-setup))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -152,12 +158,18 @@
 ;; (参考) http://weblog.ymt2.net/blog/html/2013/08/23/install_migemo_to_emacs_24_3_1.html
 
 (require 'migemo)
-(setq migemo-command "/usr/local/bin/cmigemo")
-(setq migemo-options '("-q" "--emacs"))
-(setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
-(setq migemo-user-dictionary nil)
-;; Windowsの場合のcodingシステムを変更する必要あり？
-(setq migemo-coding-system 'utf-8-unix)
+(when (eq system-type 'darwin)
+  (setq migemo-command "/usr/local/bin/cmigemo")
+  (setq migemo-options '("-q" "--emacs"))
+  (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
+  (setq migemo-user-dictionary nil)
+  (setq migemo-coding-system 'utf-8-unix))
+(when (eq system-type 'windows-nt)
+  (setq migemo-command "cmigemo")
+  (setq migemo-options '("-q" "--emacs"))
+  (setq migemo-dictionary "~/.emacs.d/elisp/dict/utf-8/migemo-dict")
+  (setq migemo-user-dictionary nil)
+  (setq migemo-coding-system 'utf-8-unix))
 (setq migemo-regex-dictionary nil)
 (load-library "migemo")
 (migemo-init)

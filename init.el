@@ -47,7 +47,7 @@
 ;; (add-to-list 'exec-path "~/bin")
 
 ;; load-path
-(add-to-load-path "elisp" "conf" "public_repos" "elpa")
+(add-to-load-path "elisp" "conf" "elpa")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;; LANGUAGE SETTINGS ;;;;;;;;;

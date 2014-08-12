@@ -23,7 +23,6 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;; MAGICAL SPELL ;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -85,6 +84,8 @@
 ;;  ウインドウを切り替える
 (define-key global-map (kbd "C-t") 'other-window)
 
+;; ファイルを保存
+(define-key global-map (kbd "M-s") 'save-buffer)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;; MODE LINE ;;;;;;;;;;;;;

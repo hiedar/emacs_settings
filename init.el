@@ -87,6 +87,9 @@
 ;; ファイルを保存
 (define-key global-map (kbd "M-s") 'save-buffer)
 
+;; org-mode
+(define-key org-mode-map (kbd "C-m") 'org-meta-return)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;; MODE LINE ;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -226,3 +229,9 @@
         "~/.emacs.d/snippets"
         ))
 (yas-global-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;; ORG-MODE ;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq org-hide-leading-starts t)

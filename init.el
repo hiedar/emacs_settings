@@ -1,237 +1,113 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;; DEFINE FUNCTIONS ;;;;;;;;;
+;;;;;;;;;;;;; BASIC ;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; [DEFINE FUNCTION]
-;;  add-to-load-path
-;;  ロードパス(拡張機能、設定ファイルの探索をするためのディレクトリ)の設定
-;;  サブディレクトリもロードパスに追加する関数
-(defun add-to-load-path (&rest paths)
-  (let (path)
-    (dolist (path paths paths)
-      (let ((default-directory
-              (expand-file-name (concat user-emacs-directory path))))
-        (add-to-list 'load-path default-directory)
-        (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-            (normal-top-level-add-subdirs-to-load-path))))))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;; PACKAGE.EL ;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;;; パッケージの設定
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;; MAGICAL SPELL ;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 右から左に読む言語に対応させないことで描画高速化
+(setq-default bidi-display-reordering nil)
 
-(require 'cl)
+;;; splash screenを無効にする
+(setq inhibit-splash-screen t)
 
-;; Emacsからの質問をy/nで回答する
-(fset 'yes-or-no-p 'y-or-n-p)
+;;; 同じ内容を履歴に記録しないようにする
+(setq history-delete-duplicates t)
 
-;; スタートアップメッセージを非表示
-(setq inhibit-startup-screen t)
+;; C-u C-SPC C-SPC …でどんどん過去のマークを遡る
+(setq set-mark-command-repeat-pop t)
 
-(when window-system
-  ;; tool-barを非表示
-  (tool-bar-mode 0))
+;;; 複数のディレクトリで同じファイル名のファイルを開いたときのバッファ名を調整する
+(require 'uniquify)
 
-;;  Emacs.app(OS X)のための環境変数の設定
-;;  （Terminal上では引き継がれているはず）
-;; (add-to-list 'exec-path "/opt/local/bin")
-;; (add-to-list 'exec-path "/usr/local/bin")
-;; (add-to-list 'exec-path "~/bin")
+;; filename<dir> 形式のバッファ名にする
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+(setq uniquify-ignore-buffers-re "[^*]+")
 
-;; load-path
-(add-to-load-path "elisp" "conf" "elpa")
+;;; ファイルを開いた位置を保存する
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file (concat user-emacs-directory "places"))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;; LANGUAGE SETTINGS ;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 釣合う括弧をハイライトする
+(show-paren-mode 1)
 
-;; [DEFINE LANGUAGE CODE]
-(set-language-environment "Japanese")
-(prefer-coding-system 'utf-8)
-
-;; [HANDLE FILE NAME]
-;;  OS X
-(when (eq system-type 'darwin)
-  (require 'ucs-normalize)
-  (set-file-name-coding-system 'utf-8-hfs)
-  (setq locale-coding-system 'utf-8-hfs))
-
-;;  Windows
-(when (eq system-type 'windows-nt)
-  (set-file-name-coding-system 'cp932)
-  (setq locale-coding-system 'cp932))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;; KEY MAPS ;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;  new line and indent
-(define-key global-map (kbd "C-m") 'newline-and-indent)
-
-;;  backspace
-(keyboard-translate ?\C-h ?\C-?)
-
-;;  折り返しを簡単に切り替える
-(define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
-
-;;  ウインドウを切り替える
-(define-key global-map (kbd "C-t") 'other-window)
-
-;; ファイルを保存
-(define-key global-map (kbd "M-s") 'save-buffer)
-
-;; org-mode
-(define-key org-mode-map (kbd "C-m") 'org-meta-return)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;; MODE LINE ;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; display column number
-(column-number-mode t)
-
-;; display file size
-(size-indication-mode t)
-
-;; display row number
-(global-linum-mode t)
-
-;; SPECIAL display full path of file on  title bar
-(setq frame-title-format "%f")
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;; TAB ;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(setq-default tab-width 4)
-
-;; don't use tab character
+;;; インデントにTABを使わないようにする
 (setq-default indent-tabs-mode nil)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;; LOOKING ;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 現在行に色をつける
+(global-hl-line-mode 1)
 
-;;(set-cursor-color 'palegreen1)
-(defface my-hl-line-face
-  ;; 背景がdarkならば背景色を紺に
-  '((((class color) (background dark))
-     (:background "dark" t))
-    ;; 背景がlightならば背景色を緑に
-    (((class color) (background light))
-     (:background "LightGoldenrodYellow" t))
-    (t (:bold t)))
-  "hl-line's my face")
-(setq hl-line-face 'my-hl-line-face)
-(global-hl-line-mode t)
+;;; ミニバッファ履歴を次回Emacs起動時にも保存する
+(savehist-mode 1)
 
+;;; シェルに合わせるため、C-hは後退に割り当てる
+(global-set-key (kbd "C-h") 'delete-backward-char)
+
+;;; モードラインに時刻を表示する
+(display-time)
+
+;;; 行番号・桁番号を表示する
+(line-number-mode 1)
+(column-number-mode 1)
+
+;;; GCを減らして軽くする
+(setq gc-cons-threshold (* 10 gc-cons-threshold))
+
+;;; ログの記録行数を増やす
+(setq message-log-max 10000)
+
+;;; 履歴をたくさん保存する
+(setq history-length 1000)
+
+;;; メニューバーとツールバーとスクロールバーを消す
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;;; font-face
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
                     :height 120)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (ace-jump-mode migemo))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
-(when (eq system-type 'darwin)
-  (set-fontset-font
-   nil 'japanese-jisx0208
-   (font-spec :family "ヒラギノ角ゴ Pro")))
-(when (eq system-type 'windows-nt)
-  (set-fontset-font
-   nil 'japanese-jisx0208
-   (font-spec :family "メイリオ")))
+;;; migemo
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;; AUTO INSTALL ;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(when (require 'auto-install nil t)
-  (setq auto-install-directory "~/.emacs.d/elisp/")
-  ;;(auto-install-update-emacswiki-package-name t)
-  (auto-install-compatibility-setup))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;; MIGEMO ;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; (参考) http://weblog.ymt2.net/blog/html/2013/08/23/install_migemo_to_emacs_24_3_1.html
-
-(require 'migemo)
-(when (eq system-type 'darwin)
-  (setq migemo-command "/usr/local/bin/cmigemo")
+(when (locate-library "migemo")
+  (setq migemo-command "/usr/local/bin/cmigemo") ; HERE cmigemoバイナリ
   (setq migemo-options '("-q" "--emacs"))
-  (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
+  (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict") ; HERE Migemo辞書
   (setq migemo-user-dictionary nil)
-  (setq migemo-coding-system 'utf-8-unix))
-(when (eq system-type 'windows-nt)
-  (setq migemo-command "cmigemo")
-  (setq migemo-options '("-q" "--emacs"))
-  (setq migemo-dictionary "~/.emacs.d/elisp/dict/utf-8/migemo-dict")
-  (setq migemo-user-dictionary nil)
-  (setq migemo-coding-system 'utf-8-unix))
-(setq migemo-regex-dictionary nil)
-(load-library "migemo")
-(migemo-init)
+  (setq migemo-regex-dictionary nil)
+  (setq migemo-coding-system 'utf-8-unix)
+  (load-library "migemo")
+  (migemo-init))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;; SEQUENTIAL COMMAND ;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; ace-jump-mode
+(require 'ace-jump-mode)
+(setq ace-jump-mode-gray-background nil)
+(setq ace-jump-word-mode-use-query-char nil)
+(setq ace-jump-mode-move-keys
+(append "asdfghjkl;:]qwertyuiop@zxcvbnm,." nil))
+(global-set-key (kbd "C-:") 'ace-jump-word-mode)
 
-;;  package-install sequential-commandでインストール
-(require 'sequential-command-config)
-(sequential-command-setup-keys)
+;;; window
+(global-set-key (kbd "C-t") 'other-window)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;; RECTANGLE EDIT ;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(cua-mode t)
-(setq cua-enable-cua-keys nil)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;; ELSCREEN ;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;  package-install elscreenでインストール
-(require 'elscreen)
-(elscreen-start)
-(elscreen-set-prefix-key (kbd "C-;"))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;; WDIRED.EL ;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;; INSERT TEMPLATE ;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(auto-insert-mode)
-(setq auto-insert-directory "~/.emacs.d/auto-insert/")
-;; html
-(define-auto-insert "\\.html$" "html-template.html")
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;; YASNIPPET ;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(add-to-list 'load-path
-             (expand-file-name "~/.emacs.d/snippets"))
-(require 'yasnippet)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/mySnippets"
-        "~/.emacs.d/snippets"
-        ))
-(yas-global-mode 1)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;; ORG-MODE ;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(setq org-hide-leading-starts t)

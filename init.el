@@ -82,6 +82,9 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;;; バックアップの抑止(~がついたバックアップファイルを作らない)
+(setq make-backup-files nil)
+
 ;;; font-face
 (set-face-attribute 'default nil
                     :family "Source Code Pro"

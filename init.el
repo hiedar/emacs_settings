@@ -24,6 +24,9 @@
 ;; C-u C-SPC C-SPC …でどんどん過去のマークを遡る
 (setq set-mark-command-repeat-pop t)
 
+;; Disable beep sound
+(setq ring-bell-function 'ignore)
+
 ;;; 複数のディレクトリで同じファイル名のファイルを開いたときのバッファ名を調整する
 (require 'uniquify)
 
@@ -34,6 +37,9 @@
 (require 'saveplace)
 (setq-default save-place t)
 (setq save-place-file (concat user-emacs-directory "places"))
+
+;; Emacsからの質問をy/nで回答する
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;;; 釣合う括弧をハイライトする
 (show-paren-mode 1)
@@ -79,15 +85,19 @@
 ;;; font-face
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
-                    :height 120)
+                    :height 130)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo))))
+    (recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
+ '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -213,18 +223,6 @@
         ("dict" . "OnlineDict")
         ("*WL:Message*" . "Wanderlust")))
 
-;;; helm
-(require 'helm-config)
-(helm-mode 1)
-(helm-migemo-mode 1)
-
-;; C-hで前の文字削除
-(define-key helm-map (kbd "C-h") 'delete-backward-char)
-(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "M-h") 'helm-mini)
-;; ミニバッファでC-hをバックスペースに割り当て
-;;(define-key helm-map (kbd "C-h") 'delete-backward-char)
-
 ;;; ffap
 (ffap-bindings)
 
@@ -236,3 +234,24 @@
 (setq recentf-exclude
       '("/TAGS$" "/var/tmp/"))
 (require 'recentf-ext)
+
+;;; helm
+(require 'helm-config)
+(helm-mode 1)
+(helm-migemo-mode 1)
+(define-key global-map (kbd "M-x")     'helm-M-x)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "C-x C-r") 'helm-recentf)
+(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
+(define-key global-map (kbd "C-c i")   'helm-imenu)
+(define-key global-map (kbd "C-x b")   'helm-buffers-list)
+
+;; C-hで前の文字削除
+(define-key helm-map (kbd "C-h") 'delete-backward-char)
+(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
+(global-set-key (kbd "M-h") 'helm-mini)
+
+;; For find-file etc.
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+;; For helm-find-files etc.
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)

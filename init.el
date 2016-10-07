@@ -56,6 +56,10 @@
 ;;; シェルに合わせるため、C-hは後退に割り当てる
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
+;;; Begining / End of buffer
+(require 'sequential-command-config)
+(sequential-command-setup-keys)
+
 ;;; モードラインに時刻を表示する
 (display-time)
 
@@ -99,7 +103,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
+    (sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -176,6 +180,7 @@
               "/opt/local/bin"
               "/sw/bin"
               "/usr/local/bin"
+              "/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
               (expand-file-name "~/bin")
               (expand-file-name "~/.emacs.d/bin")
               ))
@@ -199,10 +204,14 @@
 ;; スクリーンとバッファをkill
 (global-set-key (kbd "s-w") 'elscreen-kill-screen-and-buffers)
 ;;ブラウザみたいにタブ移動
-(global-set-key [(C-tab)] 'elscreen-next) 
+(global-set-key [(C-tab)] 'elscreen-next)
+(global-set-key [(M-s-right)] 'elscreen-next)
 (global-set-key [(C-S-tab)] 'elscreen-previous)
+(global-set-key [(M-s-left)] 'elscreen-previous)
 ;; diredを新しいscreenで
 (global-set-key (kbd "C-x C-d") 'elscreen-dired)
+;; elscreenで開いているバッファの一覧を表示
+(global-set-key (kbd "C-t") 'helm-elscreen)
 
 ;;; バッファ名・モード名からタブに表示させる内容を決定する(デフォルト設定)
 (setq elscreen-buffer-to-nickname-alist
@@ -253,6 +262,7 @@
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'helm-mini)
+(define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)
 
 ;; For find-file etc.
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)

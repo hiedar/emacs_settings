@@ -91,7 +91,7 @@
 
 ;;; font-face
 (set-face-attribute 'default nil
-                    :family "Source Code Pro"
+                    :family "SF Mono"
                     :height 130)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -103,7 +103,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
+    (redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -149,6 +149,10 @@
 (define-key global-map (kbd "s-1") 'delete-other-windows)
 ;; Mac の Command + 0 で現在のウィンドウを閉じる
 (define-key global-map (kbd "s-0") 'delete-window)
+
+;;; redo
+(require 'redo+)
+(global-set-key (kbd "C-M-/") 'redo)
 
 ;;; 改行やタブを可視化する whitespace-mode
 (setq whitespace-display-mappings

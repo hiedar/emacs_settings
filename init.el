@@ -93,6 +93,9 @@
 (set-face-attribute 'default nil
                     :family "SF Mono"
                     :height 130)
+;(set-face-attribute 'default nil
+;                    :family "Menlo"
+;                    :height 120)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -103,7 +106,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
+    (php-mode ctags lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -279,3 +282,13 @@
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 ;; For helm-find-files etc.
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; for ctags.el
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'ctags nil t)
+(setq tags-revert-without-query t)
+(setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
+(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+(global-set-key (kbd "M-.") 'ctags-search)

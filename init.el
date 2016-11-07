@@ -106,7 +106,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (php-mode ctags lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
+    (gradle-mode kotlin-mode php-mode ctags lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -292,3 +292,10 @@
 (setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
 (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
 (global-set-key (kbd "M-.") 'ctags-search)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; Markdown mode with Marked 2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; http://qiita.com/gooichi/items/2b185dbdf24166a15ca4
+
+(setq markdown-open-command "marked2")

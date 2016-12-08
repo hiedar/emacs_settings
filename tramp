@@ -1,15 +1,17 @@
-;; -*- emacs-lisp -*- <16/11/04 19:31:24 /Users/uu103634/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <16/12/07 09:35:10 /Users/uu103634/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
 ((["ssh" "rcg_mac_mini01" "10.14.252.114" nil nil]
-  ("uname" "Darwin 15.6.0")
+  nil)
+ (["ssh" "sonic" "10.14.252.10" nil nil]
+  ("uname" "Darwin 14.5.0")
   ("locale" "LC_ALL=en_US.UTF-8")
   ("test" "test")
   ("remote-path"
    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin"))
   ("remote-shell" "/bin/sh")
-  ("~" "/Users/rcg_mac_mini01")
+  ("~" "/Users/sonic")
   ("file-exists" "test -e")
   ("stat" nil)
   ("perl-file-spec" t)
@@ -18,6 +20,10 @@
   ("id" "/usr/bin/id")
   ("gid-integer" 20)
   ("gid-string" "staff")
+  ("ls" "/bin/ls")
+  ("ls-dired" nil)
   ("readlink" nil)
   ("git" "\\git")
-  ("env-u-option" t)))
+  ("tmpdir" "/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")))

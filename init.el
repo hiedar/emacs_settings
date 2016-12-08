@@ -106,7 +106,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (gradle-mode kotlin-mode php-mode ctags lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
+    (yaml-mode gradle-mode kotlin-mode php-mode ctags lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

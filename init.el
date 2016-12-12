@@ -106,7 +106,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (yaml-mode gradle-mode kotlin-mode php-mode ctags lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
+    (expand-region yaml-mode gradle-mode kotlin-mode php-mode ctags lua-mode dracula-theme redo+ sequential-command swift3-mode recentf-ext helm markdown-mode elscreen-persist elscreen smart-tab ace-jump-mode migemo)))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -292,6 +292,13 @@
 (setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
 (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
 (global-set-key (kbd "M-.") 'ctags-search)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; Expand region
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'expand-region)
+(global-set-key (kbd "s-d") 'er/expand-region)
+;(global-set-key (kbd "s-M-d") 'er/contract-region)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Markdown mode with Marked 2
